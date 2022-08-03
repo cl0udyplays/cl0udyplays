@@ -12,8 +12,9 @@
           ]
         }
       ],
-      "x": 148,
-      "y": 188
+      "inputs": [],
+      "x": 6,
+      "y": 63
     },
     {
       "type": "command",
@@ -27,8 +28,9 @@
           ]
         }
       ],
-      "x": 149,
-      "y": 325
+      "inputs": [],
+      "x": 163,
+      "y": 63
     },
     {
       "type": "response",
@@ -47,8 +49,6 @@
           "inline": "true"
         }
       ],
-      "saveToVariable": "",
-      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "next response",
@@ -61,8 +61,8 @@
           "id": "7942fe4c-dffa-4146-8cab-d254b3d80d5d"
         }
       ],
-      "x": 345,
-      "y": 182,
+      "x": 7,
+      "y": 100,
       "rtype": "Message",
       "rsubtype": "Send Embed",
       "formdata": [
@@ -96,7 +96,8 @@
         "timestamp",
         "saveToVariable",
         "saveToVariableType"
-      ]
+      ],
+      "messageActionRows": []
     },
     {
       "type": "response",
@@ -104,8 +105,6 @@
       "guid": "5053a44d-4a5e-460a-974d-da0cc07aac7c",
       "reactionFields": [],
       "embedfields": [],
-      "saveToVariable": "",
-      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "next response",
@@ -118,8 +117,8 @@
           "id": "2224944a-561a-4fa1-824b-2f31ea37c836"
         }
       ],
-      "x": 360,
-      "y": 324,
+      "x": 169,
+      "y": 99,
       "rtype": "Message",
       "rsubtype": "Send Message",
       "formdata": [
@@ -133,7 +132,58 @@
         "messageText",
         "saveToVariable",
         "saveToVariableType"
-      ]
+      ],
+      "messageActionRows": []
+    },
+    {
+      "type": "command",
+      "name": "reset",
+      "guid": "daa4afb8-019c-47fa-8874-f1e3434ac1d6",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "fa5bc321-9068-4bae-9608-ec1de258e3fa"
+          ]
+        }
+      ],
+      "inputs": [],
+      "x": 330,
+      "y": 69,
+      "perms": []
+    },
+    {
+      "type": "response",
+      "name": "resetmessages",
+      "guid": "fa5bc321-9068-4bae-9608-ec1de258e3fa",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "daa4afb8-019c-47fa-8874-f1e3434ac1d6"
+        }
+      ],
+      "x": 338,
+      "y": 108,
+      "rtype": "Channel Action",
+      "rsubtype": "Delete All Messages",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "100"
+      ],
+      "formnames": [
+        "channelname",
+        "msgcount"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
     }
   ]
 }

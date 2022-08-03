@@ -19,6 +19,7 @@
               "inline": "true"
             }
           ],
+          "messageActionRows": [],
           "channelname": "${dbsVars.CommandChannel.id}",
           "color": "1FFF57",
           "title": "Help Menu",
@@ -43,10 +44,25 @@
           "name": "show info",
           "category": "Message",
           "type": "Send Message",
+          "messageActionRows": [],
           "channelname": "${dbsVars.DefaultChannel.id}",
           "messagetext": "Command Author: ${dbsVars.CommandAuthor.displayName}\nTagged author: <@${dbsVars.CommandAuthor.id}>\nYou can insert more values by clicking the \"Insert Variable\" button next to this field!",
           "savetovariable": "",
           "savetovariabletype": "temp"
+        }
+      ]
+    },
+    {
+      "name": "reset",
+      "perms": [],
+      "actions": [
+        {
+          "name": "resetmessages",
+          "category": "Channel Action",
+          "type": "Delete All Messages",
+          "messageActionRows": [],
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "msgcount": "100"
         }
       ]
     }
